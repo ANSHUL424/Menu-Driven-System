@@ -1,0 +1,56 @@
+import pyttsx3
+import os
+
+pyttsx3.speak("Welcome to the Menu Driven System, Here is the list of Programs")
+
+
+print('To open chrome browser')
+print('To open notepad')
+print('To open Windows Media Player')
+print('To open MySQL')
+print('To open Internet Explorer')
+print('To open Sublime Text')
+print('To open Microsoft Office')
+
+
+
+p = input("enter your requirement: ")
+#[print(p)
+#os.system(p)
+
+
+
+if (("media" in p) or ("player" in p)) and (("run" in p) or ("execute" in p) or ("launch" in p)):
+  os.system("wmplayer")
+
+elif (("MySQL" in p) or ("sql Database" in p)) and (("run" in p) or ("execute" in p) or ("launch" in p)):
+  os.system("MySQL")
+
+elif (("internet explorer" in p) or ("explorer" in p)) and (("run" in p) or ("execute" in p) or ("launch"in p)):
+  os.system("iexplore")
+
+elif (("run" in p) or ("execute" in p) or ("launch" in p)) and (("chrome" in p) or ("google" in p)):
+  os.system("start chrome")
+
+
+elif (("sublime text" in p) or ("sublime" in p)) and (("run" in p) or ("execute" in p) or ("launch" in p)):
+  os.system("sublime_text")
+
+elif (("MS Office" in p) or ("microsoft office" in p)) and (("run" in p) or ("execute" in p) or ("launch" in p)):
+  print("Enter choice:")
+  print("MS Powerpoint")
+  print("MS Word")
+  print("MS Excel")
+  s = input()
+  if("Powerpoint" in s):
+    os.system("powerpnt")
+  elif("Word" in s):
+    os.system("winword")
+  elif("Excel" in s):
+    os.system("excel")
+
+elif (("editor" in p) or ("notepad" )) and (("run" in p) or ("execute" in p) or ("launch" in p)):
+  os.system("notepad")
+
+else:
+  print("don't support")
